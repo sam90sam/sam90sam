@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة التداول الرقمي - Unlimited Trading</title>
+    <title>منصة التداول الرقمي - Unlimited Trading (Binance Style)</title>
     <!-- استيراد الخط العربي من جوجل -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -16,8 +16,8 @@
         }
 
         body {
-            background-color: #000000; /* خلفية سوداء بالكامل */
-            color: #ffffff;
+            background-color: #181a20; /* خلفية بينانس الشهيرة الداكنة */
+            color: #eaecef; /* لون النصوص المريح للعين في بينانس */
             direction: rtl;
             padding: 20px;
         }
@@ -28,16 +28,16 @@
             margin: 0 auto;
         }
 
-        /* رأس الصفحة */
+        /* رأس الصفحة (على طراز بينانس) */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #121212;
+            background-color: #0b0e11;
             padding: 15px 25px;
             border-radius: 12px;
             margin-bottom: 20px;
-            border: 1px solid #222222;
+            border: 1px solid #23272e;
             flex-wrap: wrap;
             gap: 15px;
         }
@@ -45,7 +45,7 @@
         .logo {
             font-size: 22px;
             font-weight: 700;
-            color: #22c55e;
+            color: #f0b90b; /* لون شعار بينانس الأصفر الشهير */
             letter-spacing: 0.5px;
             direction: ltr;
         }
@@ -59,7 +59,7 @@
         .nav-btn {
             background: none;
             border: none;
-            color: #a1a1aa;
+            color: #848e9c;
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
@@ -69,8 +69,8 @@
         }
 
         .nav-btn:hover, .nav-btn.active {
-            color: #22c55e;
-            background-color: rgba(34, 197, 94, 0.1);
+            color: #f0b90b;
+            background-color: rgba(240, 185, 11, 0.1);
         }
 
         /* قسم أزرار الدخول والتسجيل */
@@ -81,8 +81,8 @@
 
         .btn-login {
             background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #444444;
+            color: #eaecef;
+            border: 1px solid #474d57;
             padding: 8px 16px;
             border-radius: 6px;
             font-weight: 600;
@@ -91,12 +91,12 @@
         }
 
         .btn-login:hover {
-            border-color: #22c55e;
-            color: #22c55e;
+            border-color: #f0b90b;
+            color: #f0b90b;
         }
 
         .btn-register {
-            background-color: #22c55e;
+            background-color: #f0b90b; /* زر أصفر مميز لبينانس */
             color: #000000;
             border: none;
             padding: 8px 16px;
@@ -107,7 +107,7 @@
         }
 
         .btn-register:hover {
-            background-color: #16a34a;
+            background-color: #fcd535;
         }
 
         /* تصميم ملف تعريف المستخدم بعد تسجيل الدخول */
@@ -115,8 +115,8 @@
             display: none;
             align-items: center;
             gap: 12px;
-            background-color: #1e1e1e;
-            border: 1px solid #333333;
+            background-color: #2b313a;
+            border: 1px solid #474d57;
             padding: 6px 15px;
             border-radius: 30px;
         }
@@ -124,7 +124,7 @@
         .user-avatar {
             width: 35px;
             height: 35px;
-            background-color: #22c55e;
+            background-color: #f0b90b;
             color: #000000;
             font-weight: 700;
             border-radius: 50%;
@@ -142,12 +142,12 @@
         .user-name {
             font-size: 14px;
             font-weight: 700;
-            color: #ffffff;
+            color: #eaecef;
         }
 
         .user-uid {
             font-size: 11px;
-            color: #a1a1aa;
+            color: #848e9c;
             direction: ltr;
             text-align: right;
         }
@@ -155,7 +155,7 @@
         .btn-logout {
             background: none;
             border: none;
-            color: #ef4444;
+            color: #f6465d; /* أحمر تحذيري لبينانس */
             font-size: 12px;
             cursor: pointer;
             margin-right: 8px;
@@ -166,10 +166,10 @@
             text-decoration: underline;
         }
 
-        /* --- شريط الأخبار المالية العالمية والبورصات --- */
+        /* شريط الأخبار المالية */
         .ticker-container {
-            background-color: #121212;
-            border: 1px solid #222222;
+            background-color: #0b0e11;
+            border: 1px solid #23272e;
             border-radius: 8px;
             overflow: hidden;
             display: flex;
@@ -180,7 +180,7 @@
         }
 
         .ticker-title {
-            background-color: #22c55e;
+            background-color: #f0b90b;
             color: #000000;
             padding: 0 15px;
             height: 100%;
@@ -203,7 +203,7 @@
             animation: scrollTicker 25s linear infinite;
             padding-right: 100%;
             font-size: 13px;
-            color: #e4e4e7;
+            color: #b7bdc6;
         }
 
         .ticker-item {
@@ -212,17 +212,15 @@
             font-weight: 600;
         }
 
-        /* حركة الشريط المتحرك */
         @keyframes scrollTicker {
             0% { transform: translateX(0); }
             100% { transform: translateX(100%); }
         }
-        /* --------------------------------------------- */
 
         /* بطاقة رصيد المحفظة */
         .wallet-card {
-            background: linear-gradient(135deg, #121212, #1e1e1e);
-            border: 1px solid #333333;
+            background: linear-gradient(135deg, #1e2329, #0b0e11);
+            border: 1px solid #23272e;
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 25px;
@@ -230,21 +228,21 @@
 
         .wallet-title {
             font-size: 16px;
-            color: #a1a1aa;
+            color: #848e9c;
             margin-bottom: 8px;
         }
 
         .wallet-balance {
             font-size: 32px;
             font-weight: 700;
-            color: #ffffff;
+            color: #eaecef;
             margin-bottom: 15px;
         }
 
         .wallet-actions button {
-            background-color: #222222;
-            color: #ffffff;
-            border: 1px solid #444444;
+            background-color: #2b313a;
+            color: #eaecef;
+            border: 1px solid #474d57;
             padding: 8px 18px;
             border-radius: 6px;
             font-weight: 600;
@@ -254,8 +252,9 @@
         }
 
         .wallet-actions button:hover {
-            background-color: #333333;
-            border-color: #22c55e;
+            background-color: #474d57;
+            border-color: #f0b90b;
+            color: #f0b90b;
         }
 
         /* أقسام المحتوى (تبويبات) */
@@ -269,17 +268,18 @@
 
         /* الجداول والأسواق */
         .market-section {
-            background-color: #121212;
-            border: 1px solid #222222;
+            background-color: #0b0e11;
+            border: 1px solid #23272e;
             padding: 20px;
             border-radius: 12px;
+            margin-bottom: 30px;
         }
 
         .section-title {
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #ffffff;
+            color: #eaecef;
         }
 
         table {
@@ -290,11 +290,11 @@
 
         th, td {
             padding: 12px 15px;
-            border-bottom: 1px solid #222222;
+            border-bottom: 1px solid #23272e;
         }
 
         th {
-            color: #a1a1aa;
+            color: #848e9c;
             font-size: 14px;
         }
 
@@ -302,13 +302,29 @@
             font-size: 15px;
         }
 
+        /* الألوان القياسية لبينانس للأرباح (أخضر) والخسائر (أحمر) */
         .positive {
-            color: #22c55e;
+            color: #0ecb81; 
             font-weight: 700;
         }
 
         .negative {
-            color: #ef4444;
+            color: #f6465d; 
+            font-weight: 700;
+        }
+
+        /* تذييل الصفحة (Footer) مع اسمك وحقوق النشر */
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #23272e;
+            margin-top: 40px;
+            color: #848e9c;
+            font-size: 14px;
+        }
+
+        footer span {
+            color: #f0b90b;
             font-weight: 700;
         }
 
@@ -327,8 +343,8 @@
         }
 
         .modal-content {
-            background-color: #121212;
-            border: 1px solid #333333;
+            background-color: #181a20;
+            border: 1px solid #23272e;
             padding: 30px;
             border-radius: 12px;
             width: 100%;
@@ -340,7 +356,7 @@
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #eaecef;
             text-align: center;
         }
 
@@ -351,17 +367,17 @@
         .form-group label {
             display: block;
             font-size: 14px;
-            color: #a1a1aa;
+            color: #848e9c;
             margin-bottom: 5px;
         }
 
         .form-group input {
             width: 100%;
             padding: 10px 12px;
-            background-color: #000000;
-            border: 1px solid #333333;
+            background-color: #0b0e11;
+            border: 1px solid #23272e;
             border-radius: 6px;
-            color: #ffffff;
+            color: #eaecef;
             font-size: 14px;
             direction: ltr;
             text-align: right;
@@ -374,12 +390,12 @@
 
         .form-group input:focus {
             outline: none;
-            border-color: #22c55e;
+            border-color: #f0b90b;
         }
 
         .btn-submit {
             width: 100%;
-            background-color: #22c55e;
+            background-color: #f0b90b;
             color: #000000;
             border: none;
             padding: 10px;
@@ -392,7 +408,7 @@
         }
 
         .btn-submit:hover {
-            background-color: #16a34a;
+            background-color: #fcd535;
         }
 
         .close-btn {
@@ -401,20 +417,20 @@
             left: 15px;
             background: none;
             border: none;
-            color: #a1a1aa;
+            color: #848e9c;
             font-size: 18px;
             cursor: pointer;
         }
 
         .close-btn:hover {
-            color: #ffffff;
+            color: #eaecef;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- رأس الصفحة -->
+        <!-- رأس الصفحة (طراز بينانس) -->
         <header>
             <div class="logo">Unlimited Trading</div>
             
@@ -426,7 +442,7 @@
 
             <div class="auth-buttons" id="authButtonsContainer">
                 <button class="btn-login" id="openLoginBtn">تسجيل الدخول</button>
-                <button class="btn-register" id="openRegisterBtn">حساب جديد</button>
+                <button class="btn-register" id="openRegisterBtn">تسجيل</button>
             </div>
 
             <div class="user-profile-display" id="userProfileDisplay">
@@ -439,27 +455,26 @@
             </div>
         </header>
 
-        <!-- شريط الأخبار المالية العالمية والبورصات (الجديد) -->
+        <!-- شريط الأخبار المالية -->
         <div class="ticker-container">
             <div class="ticker-title">أخبار السوق</div>
             <div class="ticker-wrapper">
-                <div class="ticker-track" id="tickerTrack">
-                    <!-- سيتم تحديث هذه العناصر تلقائياً عبر الجافاسكريبت -->
-                </div>
+                <div class="ticker-track" id="tickerTrack"></div>
             </div>
         </div>
 
         <!-- بطاقة رصيد المحفظة -->
         <div class="wallet-card">
-            <div class="wallet-title">إجمالي قيمة المحفظة</div>
+            <div class="wallet-title">إجمالي قيمة المحفظة المقدرة</div>
             <div class="wallet-balance">$14,850.25</div>
             <div class="wallet-actions">
                 <button>إيداع</button>
                 <button>سحب</button>
+                <button>تحويل</button>
             </div>
         </div>
 
-        <!-- 1. قسم التداول الفوري -->
+        <!-- 1. التداول الفوري -->
         <div id="spot" class="tab-content active">
             <div class="market-section">
                 <div class="section-title">أسواق التداول الفوري (Spot Market)</div>
@@ -496,7 +511,7 @@
             </div>
         </div>
 
-        <!-- 2. قسم تداول العقود الآجلة -->
+        <!-- 2. العقود الآجلة -->
         <div id="futures" class="tab-content">
             <div class="market-section">
                 <div class="section-title">عقود الآجلة والرافعة المالية (Futures)</div>
@@ -527,7 +542,7 @@
             </div>
         </div>
 
-        <!-- 3. صفحة الأصول الرقمية -->
+        <!-- 3. الأصول الرقمية -->
         <div id="assets" class="tab-content">
             <div class="market-section">
                 <div class="section-title">أصولي الرقمية في المحفظة</div>
@@ -564,9 +579,14 @@
             </div>
         </div>
 
+        <!-- تذييل الصفحة (Footer) المطلوب -->
+        <footer>
+            جميع الحقوق محفوظة 2026 &copy; تم التطوير بواسطة <span>samerAlrjoo</span>
+        </footer>
+
     </div>
 
-    <!-- نافذة تسجيل الدخول المنبثقة -->
+    <!-- نافذة تسجيل الدخول -->
     <div class="modal" id="loginModal">
         <div class="modal-content">
             <button class="close-btn" id="closeLoginBtn">&times;</button>
@@ -580,19 +600,19 @@
                     <label>كلمة المرور</label>
                     <input type="password" placeholder="********" required>
                 </div>
-                <button type="submit" class="btn-submit">دخول</button>
+                <button type="submit" class="btn-submit">تسجيل الدخول</button>
             </form>
         </div>
     </div>
 
-    <!-- نافذة إنشاء حساب جديد المنبثقة -->
+    <!-- نافذة إنشاء حساب -->
     <div class="modal" id="registerModal">
         <div class="modal-content">
             <button class="close-btn" id="closeRegisterBtn">&times;</button>
             <div class="modal-title">إنشاء حساب جديد</div>
             <form onsubmit="handleRegister(event)">
                 <div class="form-group">
-                    <label>The الاسم والكنية</label>
+                    <label>الاسم والكنية</label>
                     <input type="text" id="regName" class="text-input" placeholder="مثال: سامر رجو" required>
                 </div>
                 <div class="form-group">
@@ -612,9 +632,8 @@
         </div>
     </div>
 
-    <!-- كود جافاسكريبت للتحكم بالأقسام، النوافذ، وتحديث شريط الأخبار كل 3 دقائق -->
+    <!-- جافاسكريبت -->
     <script>
-        // مصفوفة الأخبار والبورصات العالمية
         const financialNews = [
             "📈 ناسداك وسندات الخزانة الأمريكية تسجل مكاسب أسبوعية جديدة وسط ترقب لقرارات الفائدة.",
             "🚀 سهم شركة أפל (AAPL) يرتفع بنسبة 2.4% بعد إطلاق تقنيات الذكاء الاصطناعي الجديدة.",
@@ -624,10 +643,8 @@
             "🌐 الذهب (XAU/USD) يحافظ على استقراره قرب مستويات تاريخية مرتفعة."
         ];
 
-        // دالة لتعبئة وتحديث شريط الأخبار
         function updateTickerNews() {
             const track = document.getElementById('tickerTrack');
-            // دمج الأخبار داخل عناصر HTML
             let htmlContent = '';
             financialNews.forEach(news => {
                 htmlContent += `<span class="ticker-item">${news}</span>`;
@@ -635,19 +652,14 @@
             track.innerHTML = htmlContent;
         }
 
-        // تشغيل الشريط لأول مرة عند تحميل الصفحة
         window.addEventListener('DOMContentLoaded', () => {
             checkUserSession();
             updateTickerNews();
-
-            // ضبط مؤقت لتحديث شريط الأخبار كل 3 دقائق (180,000 ميلي ثانية)
             setInterval(() => {
                 updateTickerNews();
-                console.log("تم تحديث شريط الأخبار المالية بنجاح.");
             }, 180000); 
         });
 
-        // دالة التنقل بين أقسام المنصة
         function switchTab(tabId, event) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
@@ -659,13 +671,10 @@
             event.currentTarget.classList.add('active');
         }
 
-        // إدارة النوافذ المنبثقة
         const loginModal = document.getElementById('loginModal');
         const registerModal = document.getElementById('registerModal');
-        
         const openLoginBtn = document.getElementById('openLoginBtn');
         const openRegisterBtn = document.getElementById('openRegisterBtn');
-        
         const closeLoginBtn = document.getElementById('closeLoginBtn');
         const closeRegisterBtn = document.getElementById('closeRegisterBtn');
 
@@ -679,56 +688,5 @@
             if (e.target === registerModal) registerModal.style.display = 'none';
         });
 
-        // دوال تسجيل الدخول والحساب
         function handleRegister(e) {
             e.preventDefault();
-            const fullName = document.getElementById('regName').value;
-            const randomUid = 'UID: ' + Math.floor(1000000 + Math.random() * 9000000);
-            localStorage.setItem('trading_user_name', fullName);
-            localStorage.setItem('trading_user_uid', randomUid);
-            registerModal.style.display = 'none';
-            checkUserSession();
-        }
-
-        function handleLogin(e) {
-            e.preventDefault();
-            const email = document.getElementById('loginEmail').value;
-            const username = email.split('@')[0];
-            const formattedName = username.charAt(0).toUpperCase() + username.slice(1);
-            const randomUid = 'UID: ' + Math.floor(1000000 + Math.random() * 9000000);
-            localStorage.setItem('trading_user_name', formattedName);
-            localStorage.setItem('trading_user_uid', randomUid);
-            loginModal.style.display = 'none';
-            checkUserSession();
-        }
-
-        function checkUserSession() {
-            const savedName = localStorage.getItem('trading_user_name');
-            const savedUid = localStorage.getItem('trading_user_uid');
-            const authButtonsContainer = document.getElementById('authButtonsContainer');
-            const userProfileDisplay = document.getElementById('userProfileDisplay');
-            const displayUserName = document.getElementById('displayUserName');
-            const displayUserUid = document.getElementById('displayUserUid');
-            const userAvatarIcon = document.getElementById('userAvatarIcon');
-
-            if (savedName && savedUid) {
-                authButtonsContainer.style.display = 'none';
-                userProfileDisplay.style.display = 'flex';
-                displayUserName.textContent = savedName;
-                displayUserUid.textContent = savedUid;
-                userAvatarIcon.textContent = savedName.charAt(0);
-            } else {
-                authButtonsContainer.style.display = 'flex';
-                userProfileDisplay.style.display = 'none';
-            }
-        }
-
-        function handleLogout() {
-            localStorage.removeItem('trading_user_name');
-            localStorage.removeItem('trading_user_uid');
-            checkUserSession();
-        }
-    </script>
-
-</body>
-</html>
